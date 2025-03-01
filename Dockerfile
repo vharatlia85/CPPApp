@@ -29,5 +29,8 @@ COPY . .
 # Create a build directory and switch to it
 RUN mkdir -p build && cd build && cmake .. && make
 
+# Specify the entry point for the main executable
+ENTRYPOINT ["./build/StudentDatabase"]
+
 # Run the tests
 CMD cd build && ctest --output-on-failure
