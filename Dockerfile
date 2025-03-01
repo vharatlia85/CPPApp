@@ -18,7 +18,7 @@ RUN apt-get update && \
 RUN cd /usr/src/gtest && \
     cmake CMakeLists.txt && \
     make && \
-    cp *.a /usr/lib
+    cp ./lib/*.a /usr/lib
 
 # Set the working directory
 WORKDIR /app
